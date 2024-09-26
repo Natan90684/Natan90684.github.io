@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Natan is a social media. </h1>
-<p>You can share things by posting in a community.</p>
+<h1>Natan is a simple social media which focuses interacting with users.</h1>
+<p>
 </body>
 </html>
 VARIABLE_NAME
