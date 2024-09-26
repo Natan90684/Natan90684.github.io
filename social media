@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan - Social Media</title>
+  <!-- Link to Tailwind CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-blue-50">
+  <!-- Header -->
+  <header class="bg-blue-600 shadow">
+    <nav class="container mx-auto p-4 flex justify-between">
+      <h1 class="text-2xl font-bold text-white">Natan</h1>
+      <div>
+        <a href="#" class="text-white hover:text-blue-300 px-3">Home</a>
+        <a href="#" class="text-white hover:text-blue-300 px-3">Profile</a>
+        <a href="#" class="text-white hover:text-blue-300 px-3">Messages</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto mt-6">
+    <!-- Welcome Section -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold text-blue-800">Welcome to Natan</h2>
+      <p class="text-blue-700">A place to share and connect with friends.</p>
+    </section>
+    
+    <!-- Posts Section -->
+    <section class="mt-6">
+      <h2 class="text-lg font-semibold text-blue-800 mb-4">Recent Posts</h2>
+      <!-- Post 1 -->
+      <div class="bg-white p-4 rounded shadow mb-4">
+        <h3 class="text-md font-semibold text-blue-600">User1's Post</h3>
+        <p class="text-blue-500">This is the first post on Natan!</p>
+      </div>
+      <!-- Add more posts here -->
+    </section>
+  </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan - Social Media</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script src="https://unpkg.com/i18next@21.6.12/dist/umd/i18next.min.js"></script>
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+<body class="bg-blue-50">
+  <header class="bg-blue-600 shadow">
+    <nav class="container mx-auto p-4 flex justify-between">
+      <h1 class="text-2xl font-bold text-white">Natan</h1>
+      <div>
+        <select id="languageSwitcher" class="text-white bg-blue-600 border-0">
+          <option value="en">English</option>
+          <option value="es-ES">Spanish (Spain)</option>
+          <option value="pt-BR">Portuguese (Brazil)</option>
+          <!-- Add other languages here -->
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto mt-6">
+    <section class="bg-white p-6 rounded shadow">
+      <h2 id="welcome" class="text-xl font-semibold text-blue-800">Welcome to Natan</h2>
+      <p id="message" class="text-blue-700">A place to share and connect with friends.</p>
+    </section>
+
+    <section class="mt-6">
+      <h2 id="postTitle" class="text-lg font-semibold text-blue-800 mb-4">Recent Posts</h2>
+      <div class="bg-white p-4 rounded shadow mb-4">
+        <h3 id="userPost" class="text-md font-semibold text-blue-600">User1's Post</h3>
+        <p id="postMessage" class="text-blue-500">This is the first post on Natan!</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const translations = {
+      en: {
+        welcome: "Welcome to Natan",
+        message: "A place to share and connect with friends.",
+        postTitle: "Recent Posts",
+        userPost: "User1's Post",
+        postMessage: "This is the first post on Natan!"
+      },
+      "es-ES": {
+        welcome: "Bienvenido a Natan",
+        message: "Un lugar para compartir y conectarse con amigos.",
+        postTitle: "Publicaciones recientes",
+        userPost: "Publicación de User1",
+        postMessage: "¡Este es el primer post en Natan!"
+      },
+      "pt-BR": {
+        welcome: "Bem-vindo ao Natan",
+        message: "Um lugar para compartilhar e se conectar com amigos.",
+        postTitle: "Postagens recentes",
+        userPost: "Post de User1",
+        postMessage: "Este é o primeiro post no Natan!"
+      }
+      // Add more languages here
+    };
+
+    $(document).ready(function() {
+      $('#languageSwitcher').change(function() {
+        const selectedLang = $(this).val();
+        $('#welcome').text(translations[selectedLang].welcome);
+        $('#message').text(translations[selectedLang].message);
+        $('#postTitle').text(translations[selectedLang].postTitle);
+        $('#userPost').text(translations[selectedLang].userPost);
+        $('#postMessage').text(translations[selectedLang].postMessage);
+      });
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan - Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Sidebar -->
+  <div class="flex">
+    <aside class="w-64 bg-blue-800 h-screen p-6">
+      <h2 class="text-white text-2xl font-semibold mb-6">Natan</h2>
+      <nav>
+        <ul>
+          <li class="mb-4">
+            <a href="/home" class="text-white hover:text-blue-300">Home</a>
+          </li>
+          <li class="mb-4">
+            <a href="/profile" class="text-white hover:text-blue-300">Profile</a>
+          </li>
+          <li class="mb-4">
+            <a href="/messages" class="text-white hover:text-blue-300">Messages</a>
+          </li>
+          <li class="mb-4">
+            <a href="/settings" class="text-white hover:text-blue-300">Settings</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-6">
+      <h1 class="text-3xl font-semibold text-blue-800 mb-4">Dashboard</h1>
+      <p class="text-lg text-blue-600">Welcome back, [User]!</p>
+
+      <!-- Add content here for different pages -->
+    </main>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Natan</title>
+  <!-- Link to Tailwind CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-blue-50 flex items-center justify-center min-h-screen">
+
+  <main class="text-center">
+    <h1 class="text-4xl font-bold text-blue-800 mb-4">Welcome to this social media</h1>
+    <p class="text-lg text-blue-600 mb-6">Natan is a simple social media website which focuses on interacting with users.</p>
+    <a href="/login" class="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg">Login</a>
+    <a href="/signup" class="text-blue-600 hover:text-blue-700 px-6 py-3">Sign Up</a>
+  </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Explore</h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold text-blue-800">Trending Posts</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
+        <!-- Repeat this for multiple posts -->
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="font-bold text-blue-700">Interesting Post Title</h3>
+          <p class="text-gray-600 mt-2">This is a short description of the post...</p>
+          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold text-blue-800">Recommended Users</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
+        <!-- Repeat for multiple users -->
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <h3 class="font-bold text-blue-700">User123</h3>
+          <button class="mt-2 bg-blue-600 text-white py-1 px-4 rounded hover:bg-blue-700">Follow</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
+// When registering a new user
+const password = 'userPassword123';
+bcrypt.hash(password, saltRounds, function(err, hash) {
+    // Store the hashed password in your database
+});
+
+// When logging in
+bcrypt.compare('userPassword123', hashedPasswordFromDB, function(err, result) {
+    if(result) {
+        // Passwords match, allow login
+    } else {
+        // Incorrect password
+    }
+});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-blue-50 flex items-center justify-center min-h-screen">
+
+  <main class="bg-white p-8 rounded-lg shadow-md w-96">
+    <h1 class="text-2xl font-bold text-blue-800 mb-6">Create your account</h1>
+    <form action="/register" method="POST" id="signupForm">
+      <!-- Email -->
+      <div class="mb-4">
+        <label for="email" class="block text-blue-700 mb-2">Email:</label>
+        <input type="email" id="email" name="email" class="w-full p-2 border border-blue-300 rounded-lg" required>
+      </div>
+
+      <!-- Username -->
+      <div class="mb-4">
+        <label for="username" class="block text-blue-700 mb-2">Username:</label>
+        <input type="text" id="username" name="username" class="w-full p-2 border border-blue-300 rounded-lg" required>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label for="password" class="block text-blue-700 mb-2">Password:</label>
+        <input type="password" id="password" name="password" class="w-full p-2 border border-blue-300 rounded-lg" required>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="mb-4">
+        <label for="dob" class="block text-blue-700 mb-2">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" class="w-full p-2 border border-blue-300 rounded-lg" required>
+      </div>
+
+      <!-- Sign Up Button -->
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Sign Up</button>
+    </form>
+    <p class="mt-4 text-blue-600">Already have an account? <a href="/login" class="text-blue-800 hover:underline">Login here</a>.</p>
+  </main>
+
+  <script>
+    // Client-side validation for minimum age (12+)
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      const dob = new Date(document.getElementById('dob').value);
+      const today = new Date();
+      const age = today.getFullYear() - dob.getFullYear();
+      const monthDiff = today.getMonth() - dob.getMonth();
+
+      // If user is younger than 12 years old, prevent form submission
+      if (age < 12 || (age === 12 && monthDiff < 0)) {
+        alert("You must be at least 12 years old to register.");
+        e.preventDefault(); // Prevent form from submitting
+      }
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Page - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">User Page</h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <!-- User Info Section -->
+    <section class="bg-white p-6 rounded-lg shadow mb-6">
+      <div class="flex items-center">
+        <img src="user-avatar.jpg" alt="User Avatar" class="w-16 h-16 rounded-full mr-4">
+        <div>
+          <h2 class="text-xl font-bold text-blue-800">Username</h2>
+          <p class="text-gray-600">Bio: This is the user’s bio...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- User's Posts -->
+    <section>
+      <h2 class="text-xl font-semibold text-blue-800 mb-4">Posts</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Repeat this for multiple posts -->
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="font-bold text-blue-700">Post Title</h3>
+          <p class="text-gray-600 mt-2">Post content here...</p>
+          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Read more</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Notifications</h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold text-blue-800 mb-4">Recent Notifications</h2>
+      <ul>
+        <!-- Repeat this for multiple notifications -->
+        <li class="mb-4">
+          <div class="bg-gray-50 p-4 rounded-lg shadow">
+            <p class="text-blue-700"><strong>User123</strong> liked your post.</p>
+            <span class="text-gray-500 text-sm">2 hours ago</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Settings</h1>
+  </header>
+
+  <main class="max-w-2xl mx-auto p-6">
+    <section class="bg-white p-6 rounded-lg shadow mb-6">
+      <h2 class="text-xl font-bold text-blue-800 mb-4">Account Settings</h2>
+      <form action="/update-settings" method="POST">
+        <!-- Email -->
+        <div class="mb-4">
+          <label for="email" class="block text-blue-700">Email:</label>
+          <input type="email" id="email" name="email" class="w-full p-2 border border-blue-300 rounded-lg" required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-4">
+          <label for="password" class="block text-blue-700">New Password:</label>
+          <input type="password" id="password" name="password" class="w-full p-2 border border-blue-300 rounded-lg">
+        </div>
+
+        <!-- Privacy Settings -->
+        <div class="mb-4">
+          <label for="privacy" class="block text-blue-700">Privacy:</label>
+          <select id="privacy" name="privacy" class="w-full p-2 border border-blue-300 rounded-lg">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Save Settings</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Search</h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <!-- Search Bar -->
+    <section class="mb-6">
+      <div class="flex items-center bg-white p-4 rounded-lg shadow">
+        <input type="text" placeholder="Search for users, posts, hashtags..." class="w-full p-2 border border-blue-300 rounded-lg" id="searchInput">
+        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg ml-2 hover:bg-blue-700" onclick="performSearch()">Search</button>
+      </div>
+    </section>
+
+    <!-- Search Results -->
+    <section id="searchResults">
+      <h2 class="text-xl font-semibold text-blue-800">Search Results</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
+        <!-- Example result for a post -->
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="font-bold text-blue-700">Post Title or Hashtag</h3>
+          <p class="text-gray-600 mt-2">This is a short description of the post...</p>
+          <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Read more</a>
+        </div>
+
+        <!-- Example result for a user -->
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <h3 class="font-bold text-blue-700">Username123</h3>
+          <button class="mt-2 bg-blue-600 text-white py-1 px-4 rounded hover:bg-blue-700">Follow</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function performSearch() {
+      const query = document.getElementById('searchInput').value;
+      // In a real app, you'd use this query to fetch search results from your server
+      alert(`Searching for: ${query}`);
+    }
+  </script>
+
+</body>
+</html>
+<section class="mb-6">
+  <div class="flex items-center space-x-4">
+    <label class="text-blue-700 font-bold">Filter by:</label>
+    <select class="p-2 border border-blue-300 rounded-lg" id="filter">
+      <option value="all">All</option>
+      <option value="users">Users</option>
+      <option value="posts">Posts</option>
+      <option value="hashtags">Hashtags</option>
+    </select>
+  </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Home - Feed</h1>
+  </header>
+
+  <!-- Main Feed Section -->
+  <main class="max-w-3xl mx-auto p-6">
+    <!-- Create Post Section (Optional) -->
+    <section class="mb-6 bg-white p-4 rounded-lg shadow">
+      <h2 class="text-lg font-semibold text-blue-700 mb-2">Create a Post</h2>
+      <textarea class="w-full p-2 border border-blue-300 rounded-lg mb-2" rows="4" placeholder="What's on your mind?"></textarea>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Post</button>
+    </section>
+
+    <!-- Posts Feed -->
+    <section>
+      <h2 class="text-xl font-semibold text-blue-800 mb-4">Your Feed</h2>
+      <div id="postsFeed">
+        <!-- Example Post -->
+        <div class="bg-white p-4 rounded-lg shado
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Home - Feed</h1>
+  </header>
+
+  <!-- Main Feed Section -->
+  <main class="max-w-3xl mx-auto p-6">
+    <!-- Create Post Section (Optional) -->
+    <section class="mb-6 bg-white p-4 rounded-lg shadow">
+      <h2 class="text-lg font-semibold text-blue-700 mb-2">Create a Post</h2>
+      <textarea class="w-full p-2 border border-blue-300 rounded-lg mb-2" rows="4" placeholder="What's on your mind?"></textarea>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Post</button>
+    </section>
+
+    <!-- Posts Feed -->
+    <section>
+      <h2 class="text-xl font-semibold text-blue-800 mb-4">Your Feed</h2>
+      <div id="postsFeed">
+        <!-- Example Post -->
+        <div class="bg-white p-4 rounded-lg shadow mb-4">
+          <div class="flex items-center mb-2">
+            <img src="user-avatar.jpg" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h3 class="font-bold text-blue-700">Username123</h3>
+              <p class="text-gray-500 text-sm">2 hours ago</p>
+            </div>
+          </div>
+          <p class="text-gray-700">This is the content of a post. It might include text, images, or links.</p>
+          <div class="flex space-x-4 mt-4 text-blue-700">
+            <button class="hover:underline">Like</button>
+            <button class="hover:underline">Comment</button>
+            <button class="hover:underline">Share</button>
+          </div>
+        </div>
+
+        <!-- Repeat for more posts -->
+        <div class="bg-white p-4 rounded-lg shadow mb-4">
+          <div class="flex items-center mb-2">
+            <img src="user-avatar.jpg" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h3 class="font-bold text-blue-700">AnotherUser</h3>
+              <p class="text-gray-500 text-sm">4 hours ago</p>
+            </div>
+          </div>
+          <p class="text-gray-700">Another example post, showing different content.</p>
+          <div class="flex space-x-4 mt-4 text-blue-700">
+            <button class="hover:underline">Like</button>
+            <button class="hover:underline">Comment</button>
+            <button class="hover:underline">Share</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-6">
+        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Load More</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Profile</h1>
+  </header>
+
+  <!-- Main Profile Section -->
+  <main class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow mt-6">
+    <!-- Profile Header -->
+    <section class="flex items-center mb-6">
+      <!-- Profile Picture -->
+      <img src="profile-pic.jpg" alt="Profile Picture" class="w-24 h-24 rounded-lg border border-blue-300 mr-6">
+      <!-- User Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-blue-700">Username123</h2>
+        <p class="text-gray-600 mt-2">About me section. This is where the user can write a brief bio or description about themselves.</p>
+      </div>
+      <!-- Follow/Interaction Buttons -->
+      <div class="ml-auto">
+        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Follow</button>
+        <button class="ml-2 bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400">Report</button
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Banned - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <style>
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .message-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Overlay for banned user notification -->
+  <div class="overlay">
+    <div class="message-box">
+      <h2 class="text-xl font-bold mb-4">User Banned</h2>
+      <p class="text-gray-700 mb-6">The user you are trying to view is banned. Please report if you find any content that breaks our rules!</p>
+      <button class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700" onclick="reportUser()">Report User</button>
+    </div>
+  </div>
+
+  <script>
+    function reportUser() {
+      // Redirect to the reporting page or display a reporting form
+      window.location.href = "report.html"; // Change to your actual report page URL
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">User Profile</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    
+    <!-- Profile Section -->
+    <section class="text-center mb-6">
+      <img src="profile_picture_url.jpg" alt="Profile Picture" class="rounded-full w-24 h-24 mx-auto mb-4">
+      <h2 class="text-2xl font-bold mb-1">Username</h2>
+      
+      <!-- Badges -->
+      <div class="flex justify-center mb-4">
+        <span class="bg-green-500 text-white text-sm font-semibold px-2 py-1 rounded-full mr-2">Verified</span>
+        <span class="bg-blue-600 text-white text-sm font-semibold px-2 py-1 rounded-full">Administrator</span>
+      </div>
+
+      <p class="text-gray-600 mb-2">About: Short user bio or description here.</p>
+      <p class="text-gray-500">Posts: 150 | Followers: 300 | Following: 200</p>
+    </section>
+
+    <!-- Profile Actions -->
+    <section class="flex justify-center space-x-4 mb-6">
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Follow</button>
+      <button class="bg-gray-300 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-400">Message</button>
+      <button class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">Block</button>
+    </section>
+
+    <!-- User Posts -->
+    <section>
+      <h3 class="text-xl font-bold mb-4">User Posts</h3>
+      <div class="border-t pt-4">
+        <!-- Example Post -->
+        <div class="bg-gray-100 p-4 mb-4 rounded-lg shadow">
+          <h4 class="font-semibold">Post Title</h4>
+          <p class="text-gray-700">This is a sample post content. It can be a description, update, or any information shared by the user.</p>
+        </div>
+        <!-- Add more posts as needed -->
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Banned - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Contact Us</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-xl font-bold text-blue-800 mb-4">Get in Touch</h2>
+    <p class="text-gray-700 mb-6">
+      If you have any questions, need support, or want to appeal a ban, feel free to contact us using the information below:
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">Email</h3>
+    <p class="text-gray-700 mb-6">
+      You can reach us via email at: <a href="mailto:nkiros96@gmail.com" class="text-blue-600 underline">nkiros96@gmail.com</a>
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">Join our Discord</h3>
+    <p class="text-gray-700 mb-6">
+      Join our community on Discord for real-time support and updates: <a href="https://discord.gg/ZAfSnvPH" class="text-blue-600 underline">https://discord.gg/ZAfSnvPH</a>
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Home - Feed</h1>
+  </header>
+
+  <!-- Main Feed Section -->
+  <main class="max-w-3xl mx-auto p-6">
+    <!-- Create Post Section (Optional) -->
+    <section class="mb-6 bg-white p-4 rounded-lg shadow">
+      <h2 class="text-lg font-semibold text-blue-700 mb-2">Create a Post</h2>
+      <textarea class="w-full p-2 border border-blue-300 rounded-lg mb-2" rows="4" placeholder="What's on your mind?"></textarea>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Post</button>
+    </section>
+
+    <!-- Posts Feed -->
+    <section>
+      <h2 class="text-xl font-semibold text-blue-800 mb-4">Your Feed</h2>
+      <div id="postsFeed">
+        <!-- Example Post -->
+        <div class="bg-white p-4 rounded-lg shado
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Home - Feed</h1>
+  </header>
+
+  <!-- Main Feed Section -->
+  <main class="max-w-3xl mx-auto p-6">
+    <!-- Create Post Section (Optional) -->
+    <section class="mb-6 bg-white p-4 rounded-lg shadow">
+      <h2 class="text-lg font-semibold text-blue-700 mb-2">Create a Post</h2>
+      <textarea class="w-full p-2 border border-blue-300 rounded-lg mb-2" rows="4" placeholder="What's on your mind?"></textarea>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Post</button>
+    </section>
+
+    <!-- Posts Feed -->
+    <section>
+      <h2 class="text-xl font-semibold text-blue-800 mb-4">Your Feed</h2>
+      <div id="postsFeed">
+        <!-- Example Post -->
+        <div class="bg-white p-4 rounded-lg shadow mb-4">
+          <div class="flex items-center mb-2">
+            <img src="user-avatar.jpg" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h3 class="font-bold text-blue-700">Username123</h3>
+              <p class="text-gray-500 text-sm">2 hours ago</p>
+            </div>
+          </div>
+          <p class="text-gray-700">This is the content of a post. It might include text, images, or links.</p>
+          <div class="flex space-x-4 mt-4 text-blue-700">
+            <button class="hover:underline">Like</button>
+            <button class="hover:underline">Comment</button>
+            <button class="hover:underline">Share</button>
+          </div>
+        </div>
+
+        <!-- Repeat for more posts -->
+        <div class="bg-white p-4 rounded-lg shadow mb-4">
+          <div class="flex items-center mb-2">
+            <img src="user-avatar.jpg" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h3 class="font-bold text-blue-700">AnotherUser</h3>
+              <p class="text-gray-500 text-sm">4 hours ago</p>
+            </div>
+          </div>
+          <p class="text-gray-700">Another example post, showing different content.</p>
+          <div class="flex space-x-4 mt-4 text-blue-700">
+            <button class="hover:underline">Like</button>
+            <button class="hover:underline">Comment</button>
+            <button class="hover:underline">Share</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-6">
+        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Load More</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Profile</h1>
+  </header>
+
+  <!-- Main Profile Section -->
+  <main class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow mt-6">
+    <!-- Profile Header -->
+    <section class="flex items-center mb-6">
+      <!-- Profile Picture -->
+      <img src="profile-pic.jpg" alt="Profile Picture" class="w-24 h-24 rounded-lg border border-blue-300 mr-6">
+      <!-- User Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-blue-700">Username123</h2>
+        <p class="text-gray-600 mt-2">About me section. This is where the user can write a brief bio or description about themselves.</p>
+      </div>
+      <!-- Follow/Interaction Buttons -->
+      <div class="ml-auto">
+        <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Follow</button>
+        <button class="ml-2 bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400">Report</button
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Banned - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <style>
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .message-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Overlay for banned user notification -->
+  <div class="overlay">
+    <div class="message-box">
+      <h2 class="text-xl font-bold mb-4">User Banned</h2>
+      <p class="text-gray-700 mb-6">The user you are trying to view is banned. Please report if you find any content that breaks our rules!</p>
+      <button class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700" onclick="reportUser()">Report User</button>
+    </div>
+  </div>
+
+  <script>
+    function reportUser() {
+      // Redirect to the reporting page or display a reporting form
+      window.location.href = "report.html"; // Change to your actual report page URL
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Banned - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header/Nav Bar -->
+  <header class="bg-blue-800
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Contact Us</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-xl font-bold text-blue-800 mb-4">Get in Touch</h2>
+    <p class="text-gray-700 mb-6">
+      If you have any questions, need support, or want to appeal a ban, feel free to contact us using the information below:
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">Email</h3>
+    <p class="text-gray-700 mb-6">
+      You can reach us via email at: <a href="mailto:nkiros96@gmail.com" class="text-blue-600 underline">nkiros96@gmail.com</a>
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">Join our Discord</h3>
+    <p class="text-gray-700 mb-6">
+      Join our community on Discord for real-time support and updates: <a href="https://discord.gg/ZAfSnvPH" class="text-blue-600 underline">https://discord.gg/ZAfSnvPH</a>
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">User Profile</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    
+    <!-- Profile Section -->
+    <section class="text-center mb-6">
+      <img src="profile_picture_url.jpg" alt="Profile Picture" class="rounded-full w-24 h-24 mx-auto mb-4">
+      <h2 class="text-2xl font-bold mb-1">Username</h2>
+      
+      <!-- Badges -->
+      <div class="flex justify-center mb-4">
+        <span class="bg-green-500 text-white text-sm font-semibold px-2 py-1 rounded-full mr-2">Verified</span>
+        <span class="bg-blue-600 text-white text-sm font-semibold px-2 py-1 rounded-full">Administrator</span>
+      </div>
+
+      <p class="text-gray-600 mb-2">About: Short user bio or description here.</p>
+      <p class="text-gray-500">Posts: 150 | Followers: 300 | Following: 200</p>
+    </section>
+
+    <!-- Profile Actions -->
+    <section class="flex justify-center space-x-4 mb-6">
+      <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Follow</button>
+      <button class="bg-gray-300 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-400">Message</button>
+      <button class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700">Block</button>
+    </section>
+
+    <!-- User Posts -->
+    <section>
+      <h3 class="text-xl font-bold mb-4">User Posts</h3>
+      <div class="border-t pt-4">
+        <!-- Example Post -->
+        <div class="bg-gray-100 p-4 mb-4 rounded-lg shadow">
+          <h4 class="font-semibold">Post Title</h4>
+          <p class="text-gray-700">This is a sample post content. It can be a description, update, or any information shared by the user.</p>
+        </div>
+        <!-- Add more posts as needed -->
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rules - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Community Rules</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-xl font-bold text-blue-800 mb-4">Guidelines for Using Natan</h2>
+    <p class="text-gray-700 mb-6">
+      Natan is a place to connect with others and share content. We want to ensure everyone enjoys a positive and respectful experience. Please follow the rules below to maintain a healthy community.
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">1. Respect Other Users</h3>
+    <p class="text-gray-700 mb-6">
+      Harassment, bullying, or hate speech of any kind is not tolerated. Treat others with kindness and respect.
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">2. No Inappropriate Content</h3>
+    <p class="text-gray-700 mb-6">
+      Do not post explicit or inappropriate content. We want Natan to be a safe space for all users.
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">3. Follow Age Restrictions</h3>
+    <p class="text-gray-700 mb-6">
+      You must be at least 12 years old to use Natan. Users under this age will be removed to comply with safety regulations.
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">4. No Spamming or Self-Promotion</h3>
+    <p class="text-gray-700 mb-6">
+      Excessive self-promotion, spamming, or advertising is not allowed. Focus on meaningful interactions and contributions.
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">5. Respect User Privacy</h3>
+    <p class="text-gray-700 mb-6">
+      Do not share other users' personal information without their consent. Protect your own privacy as well.
+    </p>
+
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">Violation of Rules</h3>
+    <p class="text-gray-700 mb-6">
+      Violating these rules may result in a ban or suspension from Natan. Please follow the rules to ensure a positive experience for everyone.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Rules - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Community Rules</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <p class="text-gray-700 mb-4">Natan is a friendly and welcoming community. We welcome everyone to help maintain a constructive space by following the guidelines below.</p>
+
+    <ul class="list-disc pl-6">
+      <li class="mb-4">
+        <strong>Treat everyone with respect:</strong> Do not insult, abuse, or threaten other users, off-site or on-site.
+      </li>
+      <li class="mb-4">
+        <strong>Be safe:</strong> Keep personal and contact information private. Do not share sensitive information such as your physical address. We cannot moderate behavior outside of the website. Don't engage in dangerous behavior, and do not encourage others to do so.
+      </li>
+      <li class="mb-4">
+        <strong>Be honest:</strong> Do not impersonate others or intentionally spread disinformation. Parody accounts should be marked as such.
+      </li>
+      <li class="mb-4">
+        <strong>Try not to break the site:</strong> If you find any security issues, please stop before causing any damage and report issues to us.
+      </li>
+      <li class="mb-4">
+        <strong>Have fun:</strong> We hope you enjoy your time on Natan. Please try to keep it a fun and safe place for everyone.
+      </li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 bg-gray-200 mt-6">
+    <p class="text-gray-700">&copy; 2024 Natan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <h1 class="text-center text-2xl font-bold">Help Center</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+
+    <div class="mb-6">
+      <h3 class="font-bold">1. How do I create an account?</h3>
+      <p>To create an account, click on the "Sign Up" button on the homepage and fill in the required information, including your email, password, username, and date of birth.</p>
+    </div>
+
+    <div class="mb-6">
+      <h3 class="font-bold">2. How do I reset my password?</h3>
+      <p>If you forget your password, click on the "Forgot Password?" link on the login page. You will receive an email with instructions to reset your password.</p>
+    </div>
+
+    <div class="mb-6">
+      <h3 class="font-bold">3. How can I report a user?</h3>
+      <p>To report a user, visit their profile and click the "Report" button. Provide the necessary details about the issue you are encountering.</p>
+    </div>
+
+    <div class="mb-6">
+      <h3 class="font-bold">4. What should I do if I see inappropriate content?</h3>
+      <p>If you see content that violates our community rules, please report it using the reporting feature on the post or user profile.</p>
+    </div>
+
+    <div class="mb-6">
+      <h3 class="font-bold">5. How do I change my profile settings?</h3>
+      <p>You can change your profile settings by going to the "Settings" page. Here, you can update your profile picture, username, and other personal information.</p>
+    </div>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">Contact Support</h2>
+    <p>If you have further questions or need assistance, feel free to reach out to us:</p>
+    <p>Email: <a href="mailto:nkiros96@gmail.com" class="text-blue-600">nkiros96@gmail.com</a></p>
+    <p>Discord Server: <a href="https:/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-4xl font-bold text-red-600">404</h1>
+    <h2 class="text-2xl font-semibold mt-4">Page Not Found</h2>
+    <p class="mt-2">Sorry, the page you are looking for does not exist.</p>
+    <a href="/" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Go to Home</a>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Connection - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-4xl font-bold text-yellow-600">Whoops!</h1>
+    <h2 class="text-2xl font-semibold mt-4">Looks like you are not connected to the Internet.</h2>
+    <p class="mt-2">Please try again or check your settings.</p>
+    <a href="javascript:location.reload();" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Try Again</a>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Connection - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script>
+    function checkConnection() {
+      // Simulate checking for internet connection
+      if (navigator.onLine) {
+        // If online, redirect to home page
+        window.location.href = "/";
+      } else {
+        // If still offline, show alert (or could show a more user-friendly message)
+        alert("Still not connected to the Internet. Please check your settings.");
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-4xl font-bold text-yellow-600">Whoops!</h1>
+    <h2 class="text-2xl font-semibold mt-4">Looks like you are not connected to the Internet.</h2>
+    <p class="mt-2">Please try again or check your settings.</p>
+    <button onclick="checkConnection()" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Retry</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Connection - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script>
+    function goHome() {
+      // Simulate that the connection is restored and redirect to the home page
+      window.location.href = "/";
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-4xl font-bold text-yellow-600">Whoops!</h1>
+    <h2 class="text-2xl font-semibold mt-4">Looks like you are not connected to the Internet.</h2>
+    <p class="mt-2">Please try again or check your settings.</p>
+    <button onclick="goHome()" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Retry</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Connection - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script>
+    function showHappyMessage() {
+      // Hide the original message
+      document.getElementById("original-message").style.display = "none";
+      // Show the success message
+      document.getElementById("success-message").style.display = "block";
+      // Redirect to home after a short delay
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2000); // Redirect after 2 seconds
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <div id="original-message">
+      <h1 class="text-4xl font-bold text-yellow-600">Whoops!</h1>
+      <h2 class="text-2xl font-semibold mt-4">Looks like you are not connected to the Internet.</h2>
+      <p class="mt-2">Please try again or check your settings.</p>
+      <button onclick="showHappyMessage()" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Retry</button>
+    </div>
+    
+    <div id="success-message" style="display: none;">
+      <h1 class="text-4xl font-bold text-green-600">🎉 Success!</h1>
+      <h2 class="text-2xl font-semibold mt-4">You're back online!</h2>
+      <p class="mt-2">Redirecting you to the homepage...</p>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Connection - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script>
+    function showHappyMessage() {
+      // Hide the original message
+      document.getElementById("original-message").style.display = "none";
+      // Show the success message
+      document.getElementById("success-message").style.display = "block";
+      // Redirect to home after a short delay
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2000); // Redirect after 2 seconds
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <div id="original-message">
+      <h1 class="text-4xl font-bold text-yellow-600">Whoops!</h1>
+      <h2 class="text-2xl font-semibold mt-4">Looks like you are not connected to the Internet.</h2>
+      <p class="mt-2">Please try again or check your settings.</p>
+      <button onclick="showHappyMessage()" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Retry</button>
+    </div>
+    
+    <div id="success-message" style="display: none;">
+      <h1 class="text-4xl font-bold text-green-600"><img src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" alt="Celebration" class="inline"> Success!</h1>
+      <h2 class="text-2xl font-semibold mt-4">You're back online!</h2>
+      <p class="mt-2">Redirecting you to the homepage...</p>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>403 Forbidden - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script>
+    function goHome() {
+      window.location.href = "/";
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-6xl font-bold text-red-600">403</h1>
+    <h2 class="text-3xl font-semibold mt-4">Forbidden</h2>
+    <p class="mt-2">You do not have permission to access this page.</p>
+    <p class="mt-4">If you believe this is an error, please contact support.</p>
+    <button onclick="goHome()" class="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Go to Homepage</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Connection - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script>
+    function goHome() {
+      // Redirects to the homepage
+      window.location.href = "/";
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <div id="original-message">
+      <h1 class="text-4xl font-bold text-yellow-600">Whoops!</h1>
+      <h2 class="text-2xl font-semibold mt-4">Looks like you are not connected to the Internet.</h2>
+      <p class="mt-2">Please try again or check your settings.</p>
+      <button onclick="goHome()" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Retry</button>
+    </div>
+    
+    <div id="success-message" style="display: none;">
+      <h1 class="text-4xl font-bold text-green-600">Success!</h1>
+      <h2 class="text-2xl font-semibold mt-4">You're back online!</h2>
+      <p class="mt-2">Redirecting you to the homepage...</p>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>403 Forbidden - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-6xl font-bold text-red-600">403</h1>
+    <h2 class="text-3xl font-semibold mt-4">Forbidden</h2>
+    <p class="mt-2">You do not have permission to access this page.</p>
+    <p class="mt-4">If you believe this is an error, please contact support.</p>
+    <a href="/" class="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Go to Homepage</a>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>403 Forbidden - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-6xl font-bold text-red-600">403</h1>
+    <h2 class="text-3xl font-semibold mt-4">Forbidden</h2>
+    <p class="mt-2">You do not have permission to access this page.</p>
+    <button onclick="goHome()" class="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Go to Homepage</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Connection - Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+  <script>
+    function goHome() {
+      window.location.href = "/";
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-4xl font-bold text-yellow-600">Whoops!</h1>
+    <h2 class="text-2xl font-semibold mt-4">Looks like you are not connected to the Internet.</h2>
+    <p class="mt-2">Please try again or check your settings.</p>
+    <button onclick="goHome()" class="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Retry</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Natan</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="text-center bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-4xl font-bold">Welcome to this social media.</h1>
+    <p class="mt-4">Natan is a simple social media website that focuses on interacting with users.</p>
+    <a href="/login" class="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Login</a>
+    <a href="/register" class="mt-2 inline-block bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700">Register</a>
+  </div>
+
+</body>
+</html>
