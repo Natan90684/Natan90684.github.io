@@ -130,4 +130,11 @@ if __name__ == '__main__':
     app.run(debug=True)
 pip install -r requirements.txt
 python app.py
+@app.route('/rules')
+def rules():
+    return render_template('rules.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
