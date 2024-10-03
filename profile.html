@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Natan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/explore">Explore</a>
+    </nav>
+
+    <div class="profile-content">
+        <h1>Your Profile</h1>
+        <div class="posts-container">
+            {% for post in posts %}
+            <div class="post">
+                <div class="post-content">{{ post.content }}</div>
+                {% if post.image %}
+                <img src="{{ post.image }}" alt="Post Image" style="max-width: 100%; height: auto;">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Natan. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
