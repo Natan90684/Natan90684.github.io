@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natan - Social Media</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: blue;">
+
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/explore">Explore</a>
+        <a href="/register">Sign Up</a>
+        <a href="/login">Log In</a>
+    </nav>
+
+    <div class="homepage-content">
+        <h1 style="font-weight: bold;">Welcome to this social media</h1>
+        <p>Natan is a social media website connecting with people!</p>
+    </div>
+
+    <footer>
+        <p>Rules and Contact:</p>
+        <p>Natan is a friendly and welcoming community. Please follow the guidelines.</p>
+        <p>Contact: <a href="mailto:natanmario3413@gmail.com">natanmario3413@gmail.com</a></p>
+        <p>Join our Discord: <a href="https://discord.gg/cK22WRKS" target="_blank">Discord Server</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            twemoji.parse(document.body);
+        });
+    </script>
+
+</body>
+</html>
