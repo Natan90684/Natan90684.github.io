@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Natan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/explore">Explore</a>
+    </nav>
+
+    <div class="settings-content">
+        <h1>Settings</h1>
+        <h2>Contact Information</h2>
+        <p>Email: {{ contact_email }}</p>
+        <p>Discord: <a href="{{ discord_link }}" target="_blank">{{ discord_link }}</a></p>
+        <h2>Account Verification</h2>
+        <p>Email Verification Status: Not Verified</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Natan. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
