@@ -1,0 +1,82 @@
+/* styles.css */
+
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0084ff; /* Blue background */
+    color: #fff; /* White text color for contrast */
+    line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #005bb5; /* Darker blue for navbar */
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff; /* White text for links */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Content area */
+.settings-content, .banned-content, .not-found-content, .login-content, .register-content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    border-radius: 10px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form fields */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* White background for input */
+    color: #333; /* Dark text for readability */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Button color */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #005bb5; /* Darker blue for footer */
+}
