@@ -1,47 +1,15 @@
 body {
     font-family: 'Noto Sans', sans-serif;
-    background-color: #f0f0f0; /* Light mode */
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text for contrast */
     margin: 0;
-}
-
-header {
-    background-color: #4CAF50;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    margin: 20px auto;
-    max-width: 600px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 24px;
-}
-
-footer {
-    text-align: center;
     padding: 20px;
 }
 
-button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+h1, h2, h3 {
+    color: #FFFFFF; /* White headers */
 }
 
-button:hover {
-    background-color: #45a049;
+a {
+    color: #3498db; /* Link color */
 }
