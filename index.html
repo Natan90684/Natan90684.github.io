@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Natan</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Welcome to Natan</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/">Home</a>
-        <a href="/explore">Explore</a>
-        <a href="/rules">Rules</a>
-        <a href="/contact">Contact</a>
-        <a href="/register">Sign Up</a>
-        <a href="/login">Log In</a>
-    </nav>
-
-    <div class="homepage-content">
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/explore">Explore</a>
+            <a href="/register">Sign Up</a>
+            <a href="/login">Log In</a>
+        </nav>
+    </header>
+    
+    <main>
         <h1>Welcome to this social media</h1>
-        <p>Natan is a social media website connecting with people!</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Natan. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+        <p>Natan,a social media website where users are connecting with people!</p>
+        <p>Required reading: <a href="/privacy">Privacy</a> and <a href="/rules">Rules</a>.</p>
+        <p>Not a member? <a href="/register">Sign Up</a> or <a href="/login">Log In</a>.</p>
+    </main>
