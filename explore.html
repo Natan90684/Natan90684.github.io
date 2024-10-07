@@ -4,21 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore - Natan</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+        a {
+            color: #00acee; /* Twitter-like blue color */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            font-size: 2.5em;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1a1a1a;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/">Home</a>
-        <a href="/explore">Explore</a>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Log In</a>
     </nav>
+</header>
 
-    <div class="explore-content">
-        <h1>Explore Natan</h1>
-        <p>Discover new posts and connect with others!</p>
-    </div>
+<div class="content">
+    <h1>Explore Natan</h1>
+    <p>Find interesting posts, users, and content here!</p>
+</div>
 
-    <footer>
-        <p>&copy; 2024 Natan. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
