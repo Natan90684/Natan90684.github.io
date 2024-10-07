@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,14 +41,29 @@
             padding: 20px;
             background-color: #000;
         }
-        .footer a {
+        .footer .required-reading {
+            font-size: 14px; /* Little text for required reading */
+            margin-bottom: 10px;
+        }
+        .footer .required-reading a {
             color: #007BFF;
             text-decoration: underline;
             margin: 0 10px;
             font-weight: bold;
         }
-        .footer a:hover {
+        .footer .required-reading a:hover {
             text-decoration: none;
+        }
+        .footer .auth-links {
+            font-size: 10px; /* Tiny text for Sign Up or Log In */
+        }
+        .footer .auth-links a {
+            color: #007BFF; /* Blue text */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer .auth-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -64,14 +79,20 @@
 </header>
 
 <main>
-    <h1>Welcome to this social media.</h1>
+    <h1>Welcome to Natan!</h1>
     <p>Natan, a social media where you can connect with users.</p>
 </main>
 
 <div class="footer">
-    <a href="privacy.html">Privacy</a>
-    <a href="rules.html">Rules</a>
-    <a href="contact.html">Contact</a>
+    <!-- Little text for required reading -->
+    <div class="required-reading">
+        Required Reading: <a href="privacy.html">Privacy</a> | <a href="rules.html">Rules</a>
+    </div>
+    
+    <!-- Tiny text for Sign Up or Log In -->
+    <div class="auth-links">
+        <a href="signup.html">Sign Up</a> or <a href="login.html">Log In</a>
+    </div>
 </div>
 
 </body>
