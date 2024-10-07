@@ -7,33 +7,91 @@
     <style>
         body {
             font-family: 'Noto Sans', sans-serif;
-            background-color: #000; /* Black background */
-            color: #fff; /* White text */
+            background-color: black;
+            color: white;
             margin: 0;
+            padding: 0;
+        }
+        .signup-container {
+            max-width: 400px;
+            margin: 50px auto;
             padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
         h1 {
-            color: #fff; /* White headers */
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00acee; /* Twitter-like blue */
         }
-        /* Additional styles here */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #333;
+            color: white;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00acee;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #008bb9;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-link a {
+            color: #00acee;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Create an Account</h1>
-    <form action="signup.html" method="POST">
-        <label for="email">Email:</label>
+
+<div class="signup-container">
+    <h1>Create your account</h1>
+    <form action="submit_signup.php" method="POST">
+        <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
         
-        <label for="username">Username:</label>
+        <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
         
-        <label for="password">Password:</label>
+        <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
         
-        <label for="birthday">Birthday:</label>
+        <label for="birthday">Birthday</label>
         <input type="date" id="birthday" name="birthday" required>
         
-        <button type="submit">Sign Up</button>
+        <input type="submit" value="Sign Up">
     </form>
+    
+    <div class="login-link">
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+</div>
+
 </body>
 </html>
