@@ -176,4 +176,3 @@ def home():
 def submit_registration():
     # Handle registration logic here
     return "Registration successful"
-
