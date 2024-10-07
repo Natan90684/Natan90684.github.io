@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rules - Natan</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00acee; /* Optional accent color */
+        }
+        ol {
+            margin: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/">Home</a>
-        <a href="/explore">Explore</a>
-        <a href="/rules">Rules</a>
-        <a href="/contact">Contact</a>
-        <a href="/register">Sign Up</a>
-        <a href="/login">Log In</a>
-    </nav>
 
-    <div class="rules-content">
-        <h1>Natan Rules</h1>
-        <ul>
-            <li><strong>1. Treat everyone with respect:</strong> Do not insult, abuse, or threaten other users, off-site or on-site.</li>
-            <li><strong>2. Be safe:</strong> Keep personal and contact information private. Do not share sensitive information such as your physical address. We cannot moderate behavior outside of the website.</li>
-            <li><strong>3. Be honest:</strong> Do not impersonate others or intentionally spread disinformation. Parody accounts should be marked as such.</li>
-            <li><strong>4. Try not to break the site:</strong> If you find any security issues, please stop before causing any damage and report issues to us.</li>
-            <li><strong>5. Have fun:</strong> Enjoy your time on Natan; please try to keep it a fun and safe place for everyone.</li>
-        </ul>
-    </div>
+<h1>Community Rules</h1>
+<ol>
+    <li>Treat everyone with respect: Do not insult, abuse, or threaten other users, off-site or on-site.</li>
+    <li>Be safe: Keep personal and contact information private. Do not share sensitive information such as your physical address. We cannot moderate behavior outside of the website.</li>
+    <li>Be honest: Do not impersonate others or intentionally spread disinformation. Parody accounts should be marked as such.</li>
+    <li>Try not to break the site: If you find any security issues, please stop before causing any damage and report issues to us. Our contact information can be in our security.txt file.</li>
+    <li>Have fun: Enjoy your time on Natan; please try to keep it a fun and safe place for everyone.</li>
+</ol>
 
-    <footer>
-        <p>&copy; 2024 Natan. All Rights Reserved.</p>
-    </footer>
+<footer>
+    <p>Thank you for being a part of our community!</p>
+</footer>
+
 </body>
 </html>
