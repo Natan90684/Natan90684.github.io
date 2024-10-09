@@ -176,3 +176,74 @@ def home():
 def submit_registration():
     # Handle registration logic here
     return "Registration successful"
+from flask import Flask, render_template, request, redirect, url_for, flash
+import sqlite3
+
+app = Flask(__name__)
+app.secret_key = "your_secret_key"
+
+# Database setup (SQLite for simplicity)
+def init_db():
+    conn = sqlite3.connect('natan.db')
+    c = conn.cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS users 
+                 (id INTEGER PRIMARY KEY, email TEXT, username TEXT, password TEXT, birthday TEXT)''')
+    conn.commit()
+    conn.close()
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        # Get form data
+        email = request.form['email']
+        username = request.form['username']
+        password = request.form['password']
+        birthday = request.form['birthday']
+
+        # Check if user already exists
+        conn = sqlite3.connect('natan.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM users WHERE email = ? OR username = ?", (email, username))
+        existing_user = c.fetchone()
+
+        if existing_user:
+            flash("User already exists. Try logging in instead.")
+            return redirect(url_for('signup'))
+        
+        # Insert new user into database
+        c.execute("INSERT INTO users (email, username, password, birthday) VALUES (?, ?, ?, ?)", 
+                  (email, username, password, birthday))
+        conn.commit()
+        conn.close()
+
+        flash("Registration successful! Please log in.")
+        return redirect(url_for('login'))
+
+    return render_template('signup.html')
+
+# Log in page
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        # Verify user credentials
+        conn = sqlite3.connect('natan.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
+        user = c.fetchone()
+        conn.close()
+
+        if user:
+            flash("Login successful!")
+            return redirect(url_for('home'))
+        else:
+            flash("Invalid credentials. Please try again.")
+            return redirect(url_for('login'))
+
+    return render_template('login.html')
+
+if __name__ == '__main__':
+    init_db()  # Ensure database is initialized
+    app.run(debug=True)
