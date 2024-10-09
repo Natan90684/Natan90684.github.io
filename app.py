@@ -247,3 +247,4 @@ def login():
 if __name__ == '__main__':
     init_db()  # Ensure database is initialized
     app.run(debug=True)
+@app.route('/signup', methods=['GET', 'POST'])
