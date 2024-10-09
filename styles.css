@@ -1,15 +1,31 @@
 body {
+    background-color: black;
+    color: white;
     font-family: 'Noto Sans', sans-serif;
-    background-color: #000000; /* Black background */
-    color: #FFFFFF; /* White text for contrast */
-    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
     padding: 20px;
+    background: #222;
+    border-radius: 8px;
 }
 
-h1, h2, h3 {
-    color: #FFFFFF; /* White headers */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
 }
 
-a {
-    color: #3498db; /* Link color */
+button {
+    background-color: #1DA1F2;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d95e8;
 }
