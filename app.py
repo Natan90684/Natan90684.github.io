@@ -248,3 +248,6 @@ if __name__ == '__main__':
     init_db()  # Ensure database is initialized
     app.run(debug=True)
 @app.route('/signup', methods=['GET', 'POST'])
+export FLASK_APP=app.py
+flask run
+pip install Flask sqlite3
