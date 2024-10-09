@@ -69,15 +69,3 @@
     </form>
     <a href="signup.html" class="signup-link">Don't have an account? Sign up</a>
 </div>
-
-</body>
-</html>
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul>
-      {% for message in messages %}
-        <li>{{ message }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
